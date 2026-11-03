@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <rect width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="28" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Smart Cart System: connections</text>
+  <rect x="340" y="170" width="220" height="200" rx="12" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+  <text x="450" y="205" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">ESP32 board</text>
+  <text x="450" y="228" text-anchor="middle" font-size="12" fill="#475569">Wi-Fi client, reads RFID and weight,</text>
+  <text x="450" y="244" text-anchor="middle" font-size="12" fill="#475569">drives the LCD and the buzzer</text>
+  <text x="450" y="280" text-anchor="middle" font-size="12" fill="#0f172a">SPI: GPIO18 SCK, 19 MISO, 23 MOSI</text>
+  <text x="450" y="298" text-anchor="middle" font-size="12" fill="#0f172a">RFID: GPIO5 (SDA/SS), GPIO4 (RST)</text>
+  <text x="450" y="316" text-anchor="middle" font-size="12" fill="#0f172a">HX711: GPIO33 (DT), GPIO32 (SCK)</text>
+  <text x="450" y="334" text-anchor="middle" font-size="12" fill="#0f172a">I2C: GPIO21 (SDA), GPIO22 (SCL)</text>
+  <text x="450" y="352" text-anchor="middle" font-size="12" fill="#0f172a">Buzzer: GPIO25</text>
+
+  <rect x="30" y="50" width="240" height="130" rx="10" fill="#e8f1fb" stroke="#1d7be0" stroke-width="2"/>
+  <text x="150" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="#0c4a6e">RC522 RFID reader</text>
+  <text x="150" y="98" text-anchor="middle" font-size="12" fill="#0c4a6e">SDA to GPIO5, RST to GPIO4</text>
+  <text x="150" y="116" text-anchor="middle" font-size="12" fill="#0c4a6e">SCK 18, MISO 19, MOSI 23</text>
+  <text x="150" y="134" text-anchor="middle" font-size="12" fill="#0c4a6e">3.3V to 3.3V (not 5V), GND to GND</text>
+  <text x="150" y="158" text-anchor="middle" font-size="12" fill="#475569">reads RFID tags on the products</text>
+  <path d="M270 115 L340 230" stroke="#1d7be0" stroke-width="3" fill="none"/>
+
+  <rect x="30" y="220" width="240" height="100" rx="10" fill="#fef9c3" stroke="#a16207" stroke-width="2"/>
+  <text x="150" y="246" text-anchor="middle" font-size="15" font-weight="700" fill="#422006">HX711 amplifier</text>
+  <text x="150" y="268" text-anchor="middle" font-size="12" fill="#422006">DT to GPIO33, SCK to GPIO32</text>
+  <text x="150" y="286" text-anchor="middle" font-size="12" fill="#422006">VCC to 3.3V, GND to GND</text>
+  <path d="M270 270 L340 285" stroke="#a16207" stroke-width="3" fill="none"/>
+
+  <rect x="30" y="360" width="240" height="70" rx="10" fill="#fef3c7" stroke="#a16207" stroke-width="2"/>
+  <text x="150" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#422006">Load cell (weighing platform)</text>
+  <text x="150" y="410" text-anchor="middle" font-size="12" fill="#422006">E+, E-, A+, A- to the HX711</text>
+  <path d="M150 320 L150 360" stroke="#a16207" stroke-width="3" fill="none"/>
+
+  <rect x="630" y="50" width="240" height="120" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="750" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="#14532d">20x4 I2C LCD (address 0x27)</text>
+  <text x="750" y="100" text-anchor="middle" font-size="12" fill="#14532d">SDA to GPIO21, SCL to GPIO22</text>
+  <text x="750" y="118" text-anchor="middle" font-size="12" fill="#14532d">VCC to 5V, GND to GND</text>
+  <text x="750" y="146" text-anchor="middle" font-size="12" fill="#475569">shows quantity and total bill</text>
+  <path d="M630 110 L560 230" stroke="#15803d" stroke-width="3" fill="none"/>
+
+  <rect x="630" y="230" width="240" height="90" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="750" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#7f1d1d">Buzzer</text>
+  <text x="750" y="280" text-anchor="middle" font-size="12" fill="#7f1d1d">(+) to GPIO25, (-) to GND</text>
+  <text x="750" y="300" text-anchor="middle" font-size="12" fill="#475569">sounds on a weight mismatch</text>
+  <path d="M630 275 L560 290" stroke="#b91c1c" stroke-width="3" fill="none"/>
+
+  <path d="M450 370 L450 440" stroke="#475569" stroke-width="3" stroke-dasharray="8 6" fill="none"/>
+  <text x="462" y="410" font-size="12" fill="#334155">Wi-Fi: HTTP POST</text>
+  <text x="462" y="426" font-size="12" fill="#334155">{productId, quantitySold}</text>
+  <rect x="320" y="440" width="260" height="50" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="450" y="470" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">Google Apps Script web app</text>
+  <path d="M580 465 L640 465" stroke="#475569" stroke-width="3" fill="none"/>
+  <rect x="640" y="440" width="230" height="50" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="755" y="470" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">Google Sheet (Sales log)</text>
+
+  <text x="450" y="530" text-anchor="middle" font-size="12" fill="#475569">The RC522 runs at 3.3V only. Join all grounds. Check the pins against your own wiring.</text>
+</svg>
